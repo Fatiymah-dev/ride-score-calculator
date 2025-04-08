@@ -31,6 +31,6 @@ Follow these instructions to run the app and tests on your local machine.
 
 Clone the repository and install required gems:
 ```bash
-git clone <repository_url>
+git clone <git@github.com:Anniezolman/Hopeskipdrive-TA.git>
 cd my_ride_app
 bundle install
