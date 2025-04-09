@@ -16,7 +16,7 @@ class RidesController < ApplicationController
   def create
     ride = @driver.rides.build(ride_params)
     calculator = RideCalculator.new(@driver.home_address, ride.start_address, ride.destination_address)
-    
+
     calculations = calculator.calculate_all
     ride.assign_attributes(
       commute_distance: calculations[:commute_distance],

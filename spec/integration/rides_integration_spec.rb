@@ -18,10 +18,10 @@ RSpec.describe 'Rides Integration', type: :request do
               start_address: data[:start_address],
               destination_address: data[:destination_address]
             }
-          }      
-          
+          }
+
             puts response.body
-            puts response.status    
+            puts response.status
       end
 
       expect(Ride.count).to eq(3)
@@ -43,20 +43,18 @@ RSpec.describe 'Rides Integration', type: :request do
             commute_distance: 10.0,
             commute_duration: 0.3
           )
-          
       end
-  
+
       get "/drivers/#{driver.id}/rides"
-  
+
       expect(response).to have_http_status(:ok)
       expect(json['rides'].size).to eq(3)
       puts response.body
-      puts response.status  
+      puts response.status
       expect(json['rides'].first['score'].to_f).to be >= json['rides'].last['score'].to_f
-
     end
   end
-  
+
 
   # Helper method to parse JSON response
   def json
