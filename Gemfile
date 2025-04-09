@@ -11,13 +11,13 @@ gem "puma", ">= 5.0"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
-gem 'kaminari'  # For pagination
-gem 'httparty'   # For making API requests (optional, can use Net::HTTP directly)
-gem 'redis'      # For caching
+gem "kaminari"  # For pagination
+gem "httparty"   # For making API requests (optional, can use Net::HTTP directly)
+gem "redis"      # For caching
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
-gem 'dotenv-rails', groups: [:development, :test]
+gem "dotenv-rails", groups: [:development, :test]
 
 # Use the database-backed adapters for Rails.cache, Active Job, and Action Cable
 gem "solid_cache"
@@ -50,8 +50,8 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  gem 'byebug'
-  gem 'rspec-rails'
+  gem "byebug"
+  gem "rspec-rails"
 end
 
 group :test do

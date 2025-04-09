@@ -1,6 +1,6 @@
 # app/controllers/rides_controller.rb
 class RidesController < ApplicationController
-  before_action :find_driver, only: [:index, :create]
+  before_action :find_driver, only: [ :index, :create ]
   def index
     rides = @driver.rides.ordered_by_score
 
