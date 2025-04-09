@@ -7,7 +7,7 @@ class RidesController < ApplicationController
     paginated_rides = rides.page(params[:page]).per(10)
 
     render json: {
-      rides: paginated_rides.as_json(only: [:id, :start_address, :destination_address, :score, :earnings, :ride_distance, :ride_duration, :commute_distance, :commute_duration]),
+      rides: paginated_rides.as_json(only: [ :id, :start_address, :destination_address, :score, :earnings, :ride_distance, :ride_duration, :commute_distance, :commute_duration ]),
       current_page: paginated_rides.current_page,
       total_pages: paginated_rides.total_pages
     }
@@ -26,14 +26,14 @@ class RidesController < ApplicationController
       earnings: calculations[:earnings],
       score: calculations[:score]
     )
-    
+
     if ride.save
       render json: ride, status: :created
     else
       render json: { errors: ride.errors.full_messages }, status: :unprocessable_entity
     end
   end
-  
+
   private
 
   def ride_params
@@ -43,6 +43,4 @@ class RidesController < ApplicationController
   def find_driver
     @driver = Driver.find(params[:driver_id])
   end
-  
-  
 end

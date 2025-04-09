@@ -1,6 +1,6 @@
 # app/services/ride_calculator.rb
-require 'faraday'
-require 'json'
+require "faraday"
+require "json"
 
 class RideCalculator
   BASE_URL = ENV['OPEN_ROUTE_BASE_URL']
