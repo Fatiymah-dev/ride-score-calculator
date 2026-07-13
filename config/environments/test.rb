@@ -23,10 +23,10 @@ Rails.application.configure do
   # config.cache_store = :null_store
   config.cache_store = :redis_cache_store, {
     url: "redis://localhost:6379/0", # Default Redis server URL
-    namespace: 'myapp_cache',        # You can customize the namespace
+    namespace: "myapp_cache",        # You can customize the namespace
     expires_in: 90.minutes          # Cache expiration time (optional)
   }
-  
+
   # Render exception templates for rescuable exceptions and raise for other exceptions.
   config.action_dispatch.show_exceptions = :rescuable
 

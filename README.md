@@ -1,4 +1,4 @@
-# RideCalculator App
+# Ride Score Calculator
 
 ## Overview
 This app calculates ride information, including commute distance, ride distance, earnings, and score, by integrating with the OpenRouteService API. Optimizations have been made to reduce the number of API calls and improve performance through caching with Redis.
@@ -31,6 +31,6 @@ Follow these instructions to run the app and tests on your local machine.
 
 Clone the repository and install required gems:
 ```bash
-git clone <git@github.com:Anniezolman/Hopeskipdrive-TA.git>
-cd my_ride_app
+git clone <git@github.com:Fatiymah-dev/ride-score-calculator.git>
+cd ride-score-calculator
 bundle install
